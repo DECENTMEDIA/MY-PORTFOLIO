@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Decent | Embedded Systems Engineer</title>
+    <meta
+      name="description"
+      content="Personal portfolio for Decent, an embedded systems engineer with Web3, blockchain, trading, community management, and client support experience."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient-bg" aria-hidden="true">
+      <svg class="watermark chip-a" viewBox="0 0 220 160">
+        <rect x="54" y="38" width="112" height="84" rx="10" />
+        <path d="M34 54h20M34 78h20M34 102h20M166 54h20M166 78h20M166 102h20" />
+        <path d="M76 64h68M76 82h42M76 100h54" />
+      </svg>
+      <svg class="watermark resistor-b" viewBox="0 0 260 120">
+        <path d="M18 60h48l12-20 24 40 24-40 24 40 24-40 12 20h56" />
+        <path d="M62 34v52M198 34v52" />
+      </svg>
+      <svg class="watermark trace-c" viewBox="0 0 260 220">
+        <path d="M40 38h90v48h68v74" />
+        <path d="M82 174h70v-34h58" />
+        <circle cx="40" cy="38" r="10" />
+        <circle cx="198" cy="160" r="10" />
+        <circle cx="82" cy="174" r="10" />
+        <circle cx="210" cy="140" r="10" />
+      </svg>
+    </div>
+    <div class="site-shell">
+      <header class="topbar" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="Decent home">
+          <span class="brand-mark">D</span>
+          <span>Decent</span>
+        </a>
+        <nav class="nav-links" aria-label="Sections">
+          <a href="#profile">Profile</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#experience">Experience</a>
+          <a href="#systems">Systems</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="icon-action" href="DECENT CV.docx" download aria-label="Download CV">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 21h14" />
+          </svg>
+        </a>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Embedded systems engineer</p>
+            <h1 id="hero-title">Building precise, connected systems from signal to software.</h1>
+            <p class="hero-lede">
+              I work across embedded engineering, blockchain communities, client support, and
+              financial-market analysis, bringing clear communication and disciplined problem
+              solving to technical environments.
+            </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button primary" href="mailto:udosenfavour21@gmail.com">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="m4 6 8 7 8-7M4 6h16v12H4z" />
+                </svg>
+                Contact
+              </a>
+              <a class="button secondary" href="DECENT CV.docx" download>
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 21h14" />
+                </svg>
+                CV
+              </a>
+            </div>
+
+            <section id="profile" class="profile-widget" aria-labelledby="profile-title">
+              <div class="profile-photo-frame">
+                <img id="profilePreview" alt="Decent profile preview" />
+                <div class="profile-initial" aria-hidden="true">D</div>
+              </div>
+              <div class="profile-controls">
+                <div>
+                  <p class="mini-eyebrow">Profile page</p>
+                  <h2 id="profile-title">Decent</h2>
+                  <p class="profile-role">Embedded Systems Engineer</p>
+                </div>
+                <label class="upload-control" for="profileUpload">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                  Upload picture
+                </label>
+                <input id="profileUpload" type="file" accept="image/*" />
+                <label class="url-control" for="profileSlug">
+                  <span>URL</span>
+                  <span class="url-preview">decent.dev/<strong id="slugPreview">decent</strong></span>
+                  <input id="profileSlug" type="text" value="decent" maxlength="32" autocomplete="off" />
+                </label>
+              </div>
+            </section>
+          </div>
+
+          <div class="hero-panel" aria-label="Embedded systems visual">
+            <canvas id="circuitCanvas" width="820" height="620"></canvas>
+            <div class="signal-card top">
+              <span>MCU</span>
+              <strong>firmware-ready</strong>
+            </div>
+            <div class="signal-card bottom">
+              <span>LINK</span>
+              <strong>IoT + Web3 aware</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="metrics" aria-label="Professional strengths">
+          <div>
+            <span>01</span>
+            <strong>Embedded Focus</strong>
+            <p>Hardware-aware software thinking, firmware discipline, and systems debugging.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Web3 Fluency</strong>
+            <p>Blockchain communities, crypto education, onboarding, and market analysis.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Client Clarity</strong>
+            <p>Support experience built on fast responses, calm problem solving, and trust.</p>
+          </div>
+        </section>
+
+        <section id="expertise" class="section split-section">
+          <div class="section-heading">
+            <p class="eyebrow">Core profile</p>
+            <h2>Technical range with a people-facing edge.</h2>
+          </div>
+          <div class="skill-grid">
+            <article>
+              <span class="chip">Embedded</span>
+              <h3>Embedded systems engineering</h3>
+              <p>
+                Comfortable thinking close to the hardware layer, where reliability, constraints,
+                testing, and clean interfaces matter.
+              </p>
+            </article>
+            <article>
+              <span class="chip">Blockchain</span>
+              <h3>Web3 and crypto</h3>
+              <p>
+                Practical knowledge of blockchain communities, cryptocurrency topics, client
+                onboarding flows, and digital-finance conversations.
+              </p>
+            </article>
+            <article>
+              <span class="chip">Markets</span>
+              <h3>Forex and technical analysis</h3>
+              <p>
+                Active Forex trader using MT5, with experience reading market structure, managing
+                risk, and balancing technical and fundamental analysis.
+              </p>
+            </article>
+            <article>
+              <span class="chip">Operations</span>
+              <h3>Community and support</h3>
+              <p>
+                Experience moderating Telegram communities, supporting members, resolving customer
+                issues, and keeping communication clear.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="experience" class="section timeline-section">
+          <div class="section-heading">
+            <p class="eyebrow">Experience</p>
+            <h2>Built across community, markets, and customer-facing technical work.</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-date">Self-employed</div>
+              <div>
+                <h3>Community Moderator and Crypto Trader</h3>
+                <p>
+                  Managed and moderated Telegram communities, guided members on cryptocurrency and
+                  trading topics, onboarded clients through Telegram and Kommo, analyzed market
+                  trends, and managed Forex signal-group insights.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">Support</div>
+              <div>
+                <h3>Customer Support Representative</h3>
+                <p>
+                  Handled client inquiries, resolved issues efficiently, and maintained customer
+                  satisfaction through direct, professional communication.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">Trading</div>
+              <div>
+                <h3>Forex and Crypto Market Analysis</h3>
+                <p>
+                  Active MT5 trader with funded-account experience, applying technical and
+                  fundamental analysis while managing risk across trade decisions.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="systems" class="section systems-section">
+          <div class="section-heading">
+            <p class="eyebrow">Systems mindset</p>
+            <h2>Where embedded engineering meets connected products.</h2>
+          </div>
+          <div class="systems-board">
+            <article>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M9 3h6v4H9zM7 7h10v10H7zM9 17h6v4H9zM3 10h4M17 10h4M3 14h4M17 14h4" />
+              </svg>
+              <h3>Firmware and control</h3>
+              <p>Microcontroller-centered thinking for devices that need stable, explainable behavior.</p>
+            </article>
+            <article>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M4 12a8 8 0 0 1 16 0M7 12a5 5 0 0 1 10 0M10 12a2 2 0 0 1 4 0M12 14v7" />
+              </svg>
+              <h3>Connected devices</h3>
+              <p>Interest in IoT, sensor data, communication layers, and product-ready integration.</p>
+            </article>
+            <article>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M4 7h16M4 12h10M4 17h16M18 10l3 2-3 2" />
+              </svg>
+              <h3>Signal to decision</h3>
+              <p>Analytical approach shaped by trading, technical analysis, and disciplined risk control.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="contact-section" aria-labelledby="contact-title">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Available for embedded, support, Web3, and technical operations roles.</h2>
+          </div>
+          <div class="contact-actions">
+            <a class="button primary" href="mailto:udosenfavour21@gmail.com">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="m4 6 8 7 8-7M4 6h16v12H4z" />
+              </svg>
+              Email
+            </a>
+            <a class="button secondary" href="tel:+2349166381036">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 1.9z" />
+              </svg>
+              Call
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
