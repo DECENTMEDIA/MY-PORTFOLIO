@@ -18,16 +18,13 @@
   </head>
   <body>
     <div class="ambient-bg" aria-hidden="true">
+      <div class="scanline"></div>
       <svg class="watermark chip-a" viewBox="0 0 220 160">
         <rect x="54" y="38" width="112" height="84" rx="10" />
         <path d="M34 54h20M34 78h20M34 102h20M166 54h20M166 78h20M166 102h20" />
         <path d="M76 64h68M76 82h42M76 100h54" />
       </svg>
-      <svg class="watermark resistor-b" viewBox="0 0 260 120">
-        <path d="M18 60h48l12-20 24 40 24-40 24 40 24-40 12 20h56" />
-        <path d="M62 34v52M198 34v52" />
-      </svg>
-      <svg class="watermark trace-c" viewBox="0 0 260 220">
+      <svg class="watermark trace-b" viewBox="0 0 260 220">
         <path d="M40 38h90v48h68v74" />
         <path d="M82 174h70v-34h58" />
         <circle cx="40" cy="38" r="10" />
@@ -36,11 +33,12 @@
         <circle cx="210" cy="140" r="10" />
       </svg>
     </div>
+
     <div class="site-shell">
       <header class="topbar" aria-label="Primary">
         <a class="brand" href="#top" aria-label="Decent home">
           <span class="brand-mark">D</span>
-          <span>Decent</span>
+          <span>DECENT</span>
         </a>
         <nav class="nav-links" aria-label="Sections">
           <a href="#profile">Profile</a>
@@ -58,7 +56,7 @@
 
       <main id="top">
         <section class="hero" aria-labelledby="hero-title">
-          <div class="hero-copy">
+          <div class="hero-copy reveal">
             <p class="eyebrow">Embedded systems engineer</p>
             <h1 id="hero-title">Building precise, connected systems from signal to software.</h1>
             <p class="hero-lede">
@@ -82,20 +80,30 @@
             </div>
           </div>
 
-          <div class="hero-panel" aria-label="Embedded systems visual">
-            <canvas id="circuitCanvas" width="820" height="620"></canvas>
-            <div class="signal-card top">
-              <span>MCU</span>
-              <strong>firmware-ready</strong>
+          <div class="hero-stage reveal" aria-label="3D embedded systems dashboard">
+            <canvas id="circuitCanvas" width="900" height="680"></canvas>
+            <div class="orbital-ring ring-one"></div>
+            <div class="orbital-ring ring-two"></div>
+            <div class="device-core">
+              <span class="core-chip">MCU</span>
+              <span class="core-status">ONLINE</span>
             </div>
-            <div class="signal-card bottom">
-              <span>LINK</span>
-              <strong>IoT + Web3 aware</strong>
+            <div class="dashboard-card card-a">
+              <span>Clock</span>
+              <strong>168 MHz</strong>
+            </div>
+            <div class="dashboard-card card-b">
+              <span>Bus</span>
+              <strong>I2C / UART</strong>
+            </div>
+            <div class="dashboard-card card-c">
+              <span>Link</span>
+              <strong>IoT + Web3</strong>
             </div>
           </div>
         </section>
 
-        <section class="metrics" aria-label="Professional strengths">
+        <section class="metrics reveal" aria-label="Professional strengths">
           <div>
             <span>01</span>
             <strong>Embedded Focus</strong>
@@ -112,55 +120,88 @@
             <p>Support experience built on fast responses, calm problem solving, and trust.</p>
           </div>
         </section>
-        
-        <center>
-        <section class="profilesection" aria-label="Profile image">
-            <img src="profile.jpg" alt="Favour Udosen" class="profile-image" />
-           </section>
-          </center>
 
-        <section id="expertise" class="section split-section">
-          <div class="section-heading">
+        <section id="profile" class="profile-section reveal" aria-label="Profile">
+          <div class="profile-card">
+            <div class="profile-image-frame">
+              <img src="profile.jpg" alt="Favour Udosen" class="profile-image" />
+              <span class="profile-fallback">D</span>
+            </div>
+            <div class="profile-content">
+              <p class="eyebrow">Profile</p>
+              <h2>Decent</h2>
+              <p>
+                Embedded systems engineer with a practical background in Web3 communities, customer
+                support, trading analysis, and technical operations.
+              </p>
+              <div class="profile-tags" aria-label="Profile tags">
+                <span>Firmware mindset</span>
+                <span>Blockchain aware</span>
+                <span>Market analysis</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="expertise" class="section split-section expertise-section reveal">
+          <div class="expertise-visual" aria-hidden="true">
+            <span class="data-node node-a"></span>
+            <span class="data-node node-b"></span>
+            <span class="data-node node-c"></span>
+            <span class="data-node node-d"></span>
+            <span class="data-stream stream-a"></span>
+            <span class="data-stream stream-b"></span>
+            <span class="data-stream stream-c"></span>
+          </div>
+          <div class="section-heading expertise-heading">
             <p class="eyebrow">Core profile</p>
             <h2>Technical range with a people-facing edge.</h2>
+            <div class="expertise-console" aria-hidden="true">
+              <span>SYS.CHECK</span>
+              <strong>4 MODULES ACTIVE</strong>
+            </div>
           </div>
           <div class="skill-grid">
-            <article>
+            <article class="skill-card skill-card-embedded">
               <span class="chip">Embedded</span>
+              <div class="skill-meter" aria-hidden="true"><span></span></div>
               <h3>Embedded systems engineering</h3>
               <p>
                 Comfortable thinking close to the hardware layer, where reliability, constraints,
                 testing, and clean interfaces matter.
               </p>
             </article>
-            <article>
+            <article class="skill-card skill-card-chain">
               <span class="chip">Blockchain</span>
+              <div class="skill-meter" aria-hidden="true"><span></span></div>
               <h3>Web3 and crypto</h3>
               <p>
                 Practical knowledge of blockchain communities, cryptocurrency topics, client
                 onboarding flows, and digital-finance conversations.
               </p>
             </article>
-            <article>
+            <article class="skill-card skill-card-market">
               <span class="chip">Markets</span>
+              <div class="skill-meter" aria-hidden="true"><span></span></div>
               <h3>Forex and technical analysis</h3>
               <p>
                 Active Forex trader using MT5, with experience reading market structure, managing
                 risk, and balancing technical and fundamental analysis.
               </p>
             </article>
-            <article>
+            <article class="skill-card skill-card-ops">
               <span class="chip">Operations</span>
+              <div class="skill-meter" aria-hidden="true"><span></span></div>
               <h3>Community and support</h3>
               <p>
-                Experience moderating Telegram communities, supporting members, resolving customer
-                issues, and keeping communication clear.
+                Experience moderating Telegram and Discord communities, supporting members,
+                resolving customer issues, and keeping communication clear.
               </p>
             </article>
           </div>
         </section>
 
-        <section id="experience" class="section timeline-section">
+        <section id="experience" class="section timeline-section reveal">
           <div class="section-heading">
             <p class="eyebrow">Experience</p>
             <h2>Built across community, markets, and customer-facing technical work.</h2>
@@ -200,10 +241,18 @@
           </div>
         </section>
 
-        <section id="systems" class="section systems-section">
+        <section id="systems" class="section systems-section reveal">
           <div class="section-heading">
             <p class="eyebrow">Systems mindset</p>
             <h2>Where embedded engineering meets connected products.</h2>
+          </div>
+          <div class="polarity-field" aria-hidden="true">
+            <span class="charge plus charge-a">+</span>
+            <span class="charge minus charge-b">-</span>
+            <span class="charge plus charge-c">+</span>
+            <span class="charge minus charge-d">-</span>
+            <span class="charge plus charge-e">+</span>
+            <span class="charge minus charge-f">-</span>
           </div>
           <div class="systems-board">
             <article>
@@ -230,7 +279,7 @@
           </div>
         </section>
 
-        <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <section id="contact" class="contact-section reveal" aria-labelledby="contact-title">
           <div>
             <p class="eyebrow">Contact</p>
             <h2 id="contact-title">Available for embedded, support, Web3, and technical operations roles.</h2>
@@ -251,6 +300,47 @@
           </div>
         </section>
       </main>
+
+      <footer class="site-footer" aria-label="Social links">
+        <div>
+          <p class="eyebrow">Connect</p>
+          <strong>Decent Media</strong>
+        </div>
+        <nav class="social-widgets" aria-label="Social widgets">
+          <a href="https://github.com/DECENTMEDIA" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.7 1.4a12.8 12.8 0 0 0-6.7 0C6.7.3 5.6.6 5.6.6a4.8 4.8 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.1 6.4 6.1 6.7a3.4 3.4 0 0 0-.9 2.6V22" />
+            </svg>
+          </a>
+          <a href="https://twitter.com/DECENTMEDIA" target="_blank" rel="noreferrer" aria-label="Twitter">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M4 4l11.6 16H20L8.4 4z" />
+              <path d="M4 20 10.8 13M13.2 11 20 4" />
+            </svg>
+          </a>
+          <a href="https://t.me/DECENTMEDIA" target="_blank" rel="noreferrer" aria-label="Telegram">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M21 4 3 11.2l7 2.2M21 4l-4.2 16-6.8-6.6M21 4 10 13.4M10 13.4V20l3.6-3.8" />
+            </svg>
+          </a>
+          <a href="mailto:udosenfavour21@gmail.com" aria-label="Email">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="m4 6 8 7 8-7M4 6h16v12H4z" />
+            </svg>
+          </a>
+          <a href="tel:+2349166381036" aria-label="Phone">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 1.9z" />
+            </svg>
+          </a>
+          <a href="https://github.com/DECENTMEDIA/MY-PORTFOLIO" target="_blank" rel="noreferrer" aria-label="Portfolio repository">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M7 17 17 7M8 7h9v9" />
+              <path d="M5 5h14v14H5z" />
+            </svg>
+          </a>
+        </nav>
+      </footer>
     </div>
 
     <script src="script.js"></script>
