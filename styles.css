@@ -1339,3 +1339,147 @@ h3 {
     transform: none;
   }
 }
+
+
+/* ────────── Responsive enhancements (Oct 2026) ────────── */
+html, body { overflow-x: clip; }
+img { max-width: 100%; height: auto; }
+section[id], main[id] { scroll-margin-top: 104px; }
+
+h1 { font-size: clamp(2.35rem, 1.1rem + 5.4vw, 5.5rem); line-height: 1; }
+h2 { font-size: clamp(1.75rem, 1.05rem + 2.7vw, 3.15rem); }
+.contact-section h2 { font-size: clamp(1.55rem, 1rem + 2vw, 2.5rem); }
+.hero-lede { font-size: clamp(1rem, 0.94rem + 0.3vw, 1.14rem); }
+
+.nav-links a.is-active {
+  color: var(--ink);
+  background: rgba(66, 242, 162, 0.14);
+  box-shadow: inset 0 -2px 0 var(--green);
+}
+
+.button:focus-visible,
+.project-link:focus-visible,
+.menu-toggle:focus-visible,
+.back-to-top:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+/* Menu button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+.menu-toggle span {
+  position: absolute;
+  left: 11px;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease;
+}
+.menu-toggle span:nth-child(1) { top: 14px; }
+.menu-toggle span:nth-child(2) { top: 20px; }
+.menu-toggle span:nth-child(3) { top: 26px; }
+.topbar.nav-open .menu-toggle span:nth-child(1) { top: 20px; transform: rotate(45deg); }
+.topbar.nav-open .menu-toggle span:nth-child(2) { opacity: 0; }
+.topbar.nav-open .menu-toggle span:nth-child(3) { top: 20px; transform: rotate(-45deg); }
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(66, 242, 162, 0.34);
+  border-radius: 50%;
+  background: var(--green);
+  color: #00140d;
+  box-shadow: 0 16px 40px rgba(66, 242, 162, 0.25);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: none; }
+
+/* Tablet */
+@media (min-width: 721px) and (max-width: 980px) {
+  .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .systems-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hero-stage { min-height: 440px; }
+  .nav-links a { padding: 8px 9px; font-size: 0.84rem; }
+}
+
+/* Phones */
+@media (max-width: 720px) {
+  .topbar { position: sticky; flex-wrap: nowrap; align-items: center; top: 8px; margin-bottom: 22px; }
+  .menu-toggle { display: block; }
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    order: initial;
+    width: auto;
+    overflow: visible;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 10px;
+    background: rgba(5, 18, 14, 0.96);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(22px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  }
+  .topbar.nav-open .nav-links { opacity: 1; visibility: visible; transform: none; }
+  .nav-links a { padding: 12px 14px; font-size: 1rem; }
+  .hero { gap: 28px; padding-bottom: 40px; }
+  .hero-stage { min-height: 360px; }
+  .metrics { margin-bottom: 56px; }
+  .project-card { padding: 22px; }
+  .site-footer { gap: 16px; }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .site-shell { width: calc(100% - 16px); }
+  .hero-actions, .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .hero-actions .button, .contact-actions .button { flex: 1 1 100%; justify-content: center; }
+  .hero-stage { min-height: 300px; }
+  .dashboard-card { padding: 8px 10px; }
+  .dashboard-card strong { font-size: 0.85rem; }
+  .project-media-duo { grid-template-columns: 1fr; }
+  .project-media img { height: 150px; }
+  .section { padding: 44px 0; }
+  .contact-section { padding: 20px; }
+  .back-to-top { right: 12px; bottom: 12px; width: 42px; height: 42px; }
+}
+
+/* Touch screens: no sticky hover lifts */
+@media (hover: none) {
+  .project-card:hover { transform: none; }
+  .project-card:hover .project-media img { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top, .nav-links, .menu-toggle span { transition: none; }
+}
